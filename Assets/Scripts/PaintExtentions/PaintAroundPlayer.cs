@@ -14,7 +14,8 @@ public class PaintAroundPlayer : MonoBehaviour
         NearestSurfacePoint,
         DirectUV,
     }
-
+    [SerializeField]
+    Vector3 offSet;
     [SerializeField]
     private Brush brush;
 
@@ -35,29 +36,29 @@ public class PaintAroundPlayer : MonoBehaviour
         bool success = true;
         var stuff = other.transform.GetComponent<InkCanvas>();
         if (stuff != null)
-        {
-            switch (useMethodType)
-            {
-                case UseMethodType.RaycastHitInfo:
-                    //success = erase ? paintObject.Erase(brush, hitInfo) : paintObject.Paint(brush, hitInfo);
-                    break;
+            
+                switch (useMethodType)
+                {
+                    case UseMethodType.RaycastHitInfo:
+                        //success = erase ? paintObject.Erase(brush, hitInfo) : paintObject.Paint(brush, hitInfo);
+                        break;
 
-                case UseMethodType.WorldPoint:
-                    success = erase ? stuff.Erase(brush, other.transform.position) : stuff.Paint(brush, other.transform.position);
-                    break;
+                    case UseMethodType.WorldPoint:
+                        success = erase ? stuff.Erase(brush, other.transform.position) : stuff.Paint(brush, other.transform.position+offSet);
+                        break;
 
-                case UseMethodType.NearestSurfacePoint:
-                    //success = erase ? paintObject.EraseNearestTriangleSurface(brush, hitInfo.point) : paintObject.PaintNearestTriangleSurface(brush, hitInfo.point);
-                    break;
+                    case UseMethodType.NearestSurfacePoint:
+                        //success = erase ? paintObject.EraseNearestTriangleSurface(brush, hitInfo.point) : paintObject.PaintNearestTriangleSurface(brush, hitInfo.point);
+                        break;
 
-                case UseMethodType.DirectUV:
-                    /*if (!(hitInfo.collider is MeshCollider))
-                        Debug.LogWarning("Raycast may be unexpected if you do not use MeshCollider.");
-                    success = erase ? paintObject.EraseUVDirect(brush, hitInfo.textureCoord) : paintObject.PaintUVDirect(brush, hitInfo.textureCoord);
-                    */
-                    break;
-            }
-        }
+                    case UseMethodType.DirectUV:
+                        /*if (!(hitInfo.collider is MeshCollider))
+                            Debug.LogWarning("Raycast may be unexpected if you do not use MeshCollider.");
+                        success = erase ? paintObject.EraseUVDirect(brush, hitInfo.textureCoord) : paintObject.PaintUVDirect(brush, hitInfo.textureCoord);
+                        */
+                        break;
+                }
+            
             if (!success)
                 Debug.LogError("Failed to paint.");
     }
