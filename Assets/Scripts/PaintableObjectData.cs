@@ -12,17 +12,25 @@ public class PaintableObjectData : MonoBehaviour
     private int currentLayer;
     public bool canBePainted { get { return checkIfCanBePainted(); } }
 
+    public static bool paintingSound;
+
     private bool checkIfCanBePainted()
     {
         if (Time.time > counter)
         {
+            paintingSound = true;
+            Debug.Log("PaintSound");
             counter = Time.time + timeToWait;
             numbersPainted++;
             isPainted = true;
             changeLayerToWalkable();
             return numbersPainted < numbersThatCanBePainted;
         }
-        else return false;
+        else
+        {
+            paintingSound = false;
+            return false;
+        }
     }
 
     bool isPainted;

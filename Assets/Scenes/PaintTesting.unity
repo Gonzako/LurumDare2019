@@ -834,6 +834,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 2048
+  sndJumpEnds:
+  - {fileID: 8300000, guid: 2434aa9d926be0b4f9ffc5dde649ed33, type: 3}
+  - {fileID: 8300000, guid: 5b6705c9840a3544d93d7a7aa385ef2c, type: 3}
 --- !u!114 &414719092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,12 +854,12 @@ MonoBehaviour:
   bounceForce: 200
   wallJumpForce: 300
   sndJump:
-  - {fileID: 8300000, guid: 279a5a465c11355419dfd3cf9c3f7d33, type: 3}
   - {fileID: 8300000, guid: e7254e2ed88337448808a2b9293fcff3, type: 3}
   - {fileID: 8300000, guid: 328b58d1915ca214081d27289957acc7, type: 3}
-  - {fileID: 8300000, guid: 2434aa9d926be0b4f9ffc5dde649ed33, type: 3}
-  - {fileID: 8300000, guid: e6a204799413f88439a3b238d9d9839b, type: 3}
-  - {fileID: 8300000, guid: ea0ea65d10121024081dc250e3aaa544, type: 3}
+  sndPaint:
+  - {fileID: 8300000, guid: da0344930259bc143b5da35e6b5ac998, type: 3}
+  - {fileID: 8300000, guid: 3da19300070eed949a69a1e97cfcabd2, type: 3}
+  - {fileID: 8300000, guid: 598731b58fc757444bec95fcf267940f, type: 3}
 --- !u!1 &475543862
 GameObject:
   m_ObjectHideFlags: 0
@@ -3468,7 +3471,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b17dccb4119df4d48842aa953f1f9409, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
