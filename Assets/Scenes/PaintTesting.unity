@@ -806,6 +806,7 @@ MonoBehaviour:
     m_Bits: 2048
   sndJumpEnds:
   - {fileID: 8300000, guid: 2434aa9d926be0b4f9ffc5dde649ed33, type: 3}
+  - {fileID: 8300000, guid: 5b6705c9840a3544d93d7a7aa385ef2c, type: 3}
 --- !u!114 &414719092
 MonoBehaviour:
   m_ObjectHideFlags: 0
