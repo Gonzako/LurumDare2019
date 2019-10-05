@@ -24,6 +24,7 @@ public class PaintAroundPlayer : MonoBehaviour
     [SerializeField]
     bool erase;
 
+    private Camera cam;
 
     private Vector3 getPointOfContact(Collider2D otherCol)
     {
@@ -40,7 +41,11 @@ public class PaintAroundPlayer : MonoBehaviour
             brush.RotateAngle = 0;
     }
 
-   
+    private void Start()
+    {
+        cam = Camera.main;
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
 
@@ -58,7 +63,7 @@ public class PaintAroundPlayer : MonoBehaviour
                     break;
 
                 case UseMethodType.WorldPoint:
-                    success = erase ? stuff.Erase(brush, pointOfContact) : stuff.Paint(brush, pointOfContact);
+                    success = erase ? stuff.Erase(brush, pointOfContact) : stuff.Paint(brush, pointOfContact, null, cam);
                     data.IsPainted = true;
                     break;
 
