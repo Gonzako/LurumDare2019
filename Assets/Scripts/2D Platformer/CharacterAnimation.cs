@@ -20,14 +20,13 @@ public class CharacterAnimation : MonoBehaviour
         float speed = mover.Speed;
         animator.SetFloat("Speed", Mathf.Abs(speed));
 
-
-        //Esto significa que si la velocidad es 0 no hace el flip
-        //Si estamos totalmente parados nos quedamos mirando a la 
-        //direccion que sea que estuvieramos mirando
-        if (speed != 0)
+        if (speed == 0)
         {
+            animator.SetBool("isRunning", false);
+            Debug.Log("NOT FCKIN RUNNING");
+        }
+        else {
             spriteRenderer.flipX = speed > 0;
         }
-        
     }
 }
