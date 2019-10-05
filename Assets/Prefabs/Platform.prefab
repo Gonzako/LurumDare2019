@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7798005314938311279}
   - component: {fileID: 5076223630294331220}
   - component: {fileID: 7739995204002997169}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Quad (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,8 +175,7 @@ GameObject:
   - component: {fileID: 7494595783158375457}
   - component: {fileID: 692588153460412888}
   - component: {fileID: 3604412756908183761}
-  - component: {fileID: 120713229}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Quad (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,19 +320,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
---- !u!114 &120713229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1599945009045838779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338ef8e983028f84ba3b0f19c10b835f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layerToChangeInto: 0
 --- !u!1 &3777990759889238151
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +335,7 @@ GameObject:
   - component: {fileID: 8639045977209227006}
   - component: {fileID: 7009898978827524761}
   - component: {fileID: 5053592977933920525}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Quad (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6183906175696493054}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,7 +530,7 @@ GameObject:
   - component: {fileID: 6856334801773969444}
   - component: {fileID: 8513452085974028808}
   - component: {fileID: 2777150419355867926}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Quad (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +690,7 @@ GameObject:
   - component: {fileID: 2658695674438374802}
   - component: {fileID: 2153883828030980265}
   - component: {fileID: 7687359864548747718}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Quad (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
