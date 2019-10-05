@@ -23,6 +23,7 @@ public class PlayerMovementController : MonoBehaviour, IMove
 
     private AudioSource audioSource;
     public AudioClip[] sndJump;
+    public AudioClip[] sndPaint;
 
     private void Awake()
     {
@@ -45,6 +46,8 @@ public class PlayerMovementController : MonoBehaviour, IMove
                 rigidbody2D.AddForce(characterGrounding.GroundedDirection*-1f * wallJumpForce);
             }
         }
+
+        PlayPaintSound();
     }
 
     private void FixedUpdate()
@@ -66,5 +69,14 @@ public class PlayerMovementController : MonoBehaviour, IMove
     {
         audioSource.clip = sndJump[UnityEngine.Random.Range(0, sndJump.Length)];
         audioSource.Play();
+    }
+
+    private void PlayPaintSound()
+    {
+        if (!audioSource.isPlaying && PaintableObjectData.paintingSound)
+        {
+            audioSource.clip = sndPaint[UnityEngine.Random.Range(0, sndPaint.Length)];
+            audioSource.Play();
+        }
     }
 }
