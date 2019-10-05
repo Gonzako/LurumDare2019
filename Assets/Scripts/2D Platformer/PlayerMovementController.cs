@@ -21,6 +21,10 @@ public class PlayerMovementController : MonoBehaviour, IMove
 
     public float Speed { get; private set; }
 
+    public AudioClip[] sndJump;
+    public AudioClip[] sndJumpEnds;
+    public AudioClip[] sndPaint;
+
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
