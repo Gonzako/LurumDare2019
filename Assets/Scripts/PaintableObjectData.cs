@@ -7,11 +7,27 @@ public class PaintableObjectData : MonoBehaviour
 {
     public int layerToChangeInto = 11;
     public int numbersThatCanBePainted = 3;
+    [SerializeField]
+    private float timeToWait = 0.2f;
     private int currentLayer;
-    public bool canBePainted { get { numbersPainted++; isPainted = true ;changeLayerToWalkable();  return numbersPainted < numbersThatCanBePainted;  }  }
+    public bool canBePainted { get { return checkIfCanBePainted(); } }
+
+    private bool checkIfCanBePainted()
+    {
+        if (Time.time > counter)
+        {
+            counter = Time.time + timeToWait;
+            numbersPainted++;
+            isPainted = true;
+            changeLayerToWalkable();
+            return numbersPainted < numbersThatCanBePainted;
+        }
+        else return false;
+    }
 
     bool isPainted;
     private int numbersPainted = 0;
+    private float counter;
 
     private void changeLayerToWalkable()
     {
@@ -30,6 +46,10 @@ public class PaintableObjectData : MonoBehaviour
 
 
     #region UnityAPI
+    private void Update()
+    {
+        
+    }
     private void Awake()
     {
         currentLayer = gameObject.layer;

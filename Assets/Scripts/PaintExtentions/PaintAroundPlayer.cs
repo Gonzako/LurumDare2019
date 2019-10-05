@@ -25,10 +25,12 @@ public class PaintAroundPlayer : MonoBehaviour
     bool erase;
 
     private Camera cam;
+    public float randomWeight = 10;
 
     private Vector3 getPointOfContact(Collider2D otherCol)
     {
         RaycastHit2D _hit = Physics2D.Raycast(transform.position, transform.position - otherCol.transform.position);
+        Vector3 point = _hit.point + Random.insideUnitCircle * randomWeight;
         return _hit.point;
     }
 
