@@ -4,10 +4,10 @@ namespace Es.InkPainter.Sample
 {
 	public class MousePainter : MonoBehaviour
 	{
-		/// <summary>
-		/// Types of methods used to paint.
-		/// </summary>
-		[System.Serializable]
+    /// <summary>
+    /// Types of methods used to paint.
+    /// </summary>
+    [System.Serializable]
 		private enum UseMethodType
 		{
 			RaycastHitInfo,
@@ -66,6 +66,7 @@ namespace Es.InkPainter.Sample
 		{
 			if(GUILayout.Button("Reset"))
 			{
+                transform.parent.position = new Vector3(-12.18f, -1.58f, 0);
 				foreach(var canvas in FindObjectsOfType<InkCanvas>())
 					canvas.ResetPaint();
 			}
