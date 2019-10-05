@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
+  numbersThatCanBePainted: 3
 --- !u!1 &1599945009045838779
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +176,6 @@ GameObject:
   - component: {fileID: 7494595783158375457}
   - component: {fileID: 692588153460412888}
   - component: {fileID: 3604412756908183761}
-  - component: {fileID: 120713229}
   m_Layer: 10
   m_Name: Quad (1)
   m_TagString: Untagged
@@ -321,19 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
---- !u!114 &120713229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1599945009045838779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338ef8e983028f84ba3b0f19c10b835f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layerToChangeInto: 0
+  numbersThatCanBePainted: 3
 --- !u!1 &3777990759889238151
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,6 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
+  numbersThatCanBePainted: 3
 --- !u!1 &4105369800120507231
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
+  numbersThatCanBePainted: 3
 --- !u!1 &9022076413526017224
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,3 +839,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
+  numbersThatCanBePainted: 3

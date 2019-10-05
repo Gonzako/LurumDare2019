@@ -34,13 +34,6 @@ public class PaintAroundPlayer : MonoBehaviour
 
     #region UnityAPI
 
-    private void Update()
-    {
-        brush.RotateAngle += 40 * Time.deltaTime;
-        if (brush.RotateAngle > 360)
-            brush.RotateAngle = 0;
-    }
-
     private void Start()
     {
         cam = Camera.main;
@@ -54,7 +47,7 @@ public class PaintAroundPlayer : MonoBehaviour
         var stuff = other.transform.GetComponent<InkCanvas>();
         var data = other.transform.GetComponent<PaintableObjectData>();
         var pointOfContact = getPointOfContact(other);
-        if (stuff != null)
+        if (stuff != null  && data.canBePainted)
 
             switch (useMethodType)
             {
@@ -63,8 +56,10 @@ public class PaintAroundPlayer : MonoBehaviour
                     break;
 
                 case UseMethodType.WorldPoint:
+                    brush.RotateAngle += 41;
+                    if (brush.RotateAngle > 360)
+                        brush.RotateAngle = brush.RotateAngle - 360;
                     success = erase ? stuff.Erase(brush, pointOfContact) : stuff.Paint(brush, pointOfContact, null, cam);
-                    data.IsPainted = true;
                     break;
 
                 case UseMethodType.NearestSurfacePoint:
