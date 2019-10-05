@@ -804,6 +804,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 2048
+  sndJumpEnds:
+  - {fileID: 8300000, guid: 2434aa9d926be0b4f9ffc5dde649ed33, type: 3}
 --- !u!114 &414719092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,12 +823,8 @@ MonoBehaviour:
   bounceForce: 200
   wallJumpForce: 300
   sndJump:
-  - {fileID: 8300000, guid: 279a5a465c11355419dfd3cf9c3f7d33, type: 3}
   - {fileID: 8300000, guid: e7254e2ed88337448808a2b9293fcff3, type: 3}
   - {fileID: 8300000, guid: 328b58d1915ca214081d27289957acc7, type: 3}
-  - {fileID: 8300000, guid: 2434aa9d926be0b4f9ffc5dde649ed33, type: 3}
-  - {fileID: 8300000, guid: e6a204799413f88439a3b238d9d9839b, type: 3}
-  - {fileID: 8300000, guid: ea0ea65d10121024081dc250e3aaa544, type: 3}
 --- !u!1 &475543862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2613,12 +2611,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1599945009045838779, guid: ef2f79b6a51f1bb418ff9d86cf19a652,
+    - target: {fileID: 3777990759889238151, guid: ef2f79b6a51f1bb418ff9d86cf19a652,
         type: 3}
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 3777990759889238151, guid: ef2f79b6a51f1bb418ff9d86cf19a652,
+    - target: {fileID: 1599945009045838779, guid: ef2f79b6a51f1bb418ff9d86cf19a652,
         type: 3}
       propertyPath: m_Layer
       value: 11

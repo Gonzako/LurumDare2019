@@ -21,8 +21,18 @@ public class CharacterGrounding : MonoBehaviour
     public bool IsGrounded { get; private set; }
     public Vector2 GroundedDirection { get; private set; }
 
+    private AudioSource audioSource;
+    public AudioClip[] sndJumpEnds;
+    bool sndAlreadyPlayed;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void Update()
-    {       
+    {
+
 
         foreach (var position in positions)
         {
@@ -47,10 +57,14 @@ public class CharacterGrounding : MonoBehaviour
                 transform.position += delta; 
             }
             groundedObjectLastPosition = groundedObject.position;
+
+            if (IsGrounded && !sndAlreadyPlayed)
+                PlayJumpEndsSound();
         }
         else
         {
             groundedObjectLastPosition = null;
+            sndAlreadyPlayed = false;
         }
     }
     
@@ -75,5 +89,12 @@ public class CharacterGrounding : MonoBehaviour
             groundedObject = null;
             IsGrounded = false;
         }
+    }
+
+    private void PlayJumpEndsSound()
+    {
+        audioSource.clip = sndJumpEnds[UnityEngine.Random.Range(0, sndJumpEnds.Length)];
+        audioSource.Play();
+        sndAlreadyPlayed = true;
     }
 }
