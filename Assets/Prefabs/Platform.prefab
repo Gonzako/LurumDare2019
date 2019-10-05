@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 5401978137362459191}
   - component: {fileID: 7798005314938311279}
   - component: {fileID: 5076223630294331220}
-  m_Layer: 0
+  - component: {fileID: 7739995204002997169}
+  m_Layer: 10
   m_Name: Quad (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,6 +147,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7739995204002997169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666428097440793920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338ef8e983028f84ba3b0f19c10b835f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChangeInto: 11
 --- !u!1 &1599945009045838779
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +174,8 @@ GameObject:
   - component: {fileID: 1677468524}
   - component: {fileID: 7494595783158375457}
   - component: {fileID: 692588153460412888}
-  m_Layer: 0
+  - component: {fileID: 3604412756908183761}
+  m_Layer: 10
   m_Name: Quad (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,6 +307,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3604412756908183761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599945009045838779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338ef8e983028f84ba3b0f19c10b835f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChangeInto: 11
 --- !u!1 &3777990759889238151
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +334,8 @@ GameObject:
   - component: {fileID: 2987201892902528478}
   - component: {fileID: 8639045977209227006}
   - component: {fileID: 7009898978827524761}
-  m_Layer: 0
+  - component: {fileID: 5053592977933920525}
+  m_Layer: 10
   m_Name: Quad (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,6 +467,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5053592977933920525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777990759889238151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338ef8e983028f84ba3b0f19c10b835f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChangeInto: 11
 --- !u!1 &4105369800120507231
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,8 +489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6183906175696493054}
-  - component: {fileID: 4894161234006138759}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,32 +515,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &4894161234006138759
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4105369800120507231}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &6750129750612034375
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +529,8 @@ GameObject:
   - component: {fileID: 8890591660718213798}
   - component: {fileID: 6856334801773969444}
   - component: {fileID: 8513452085974028808}
-  m_Layer: 0
+  - component: {fileID: 2777150419355867926}
+  m_Layer: 10
   m_Name: Quad (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,6 +662,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2777150419355867926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750129750612034375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338ef8e983028f84ba3b0f19c10b835f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChangeInto: 11
 --- !u!1 &9022076413526017224
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +689,8 @@ GameObject:
   - component: {fileID: 4229412767518196807}
   - component: {fileID: 2658695674438374802}
   - component: {fileID: 2153883828030980265}
-  m_Layer: 0
+  - component: {fileID: 7687359864548747718}
+  m_Layer: 10
   m_Name: Quad (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -792,3 +822,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7687359864548747718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9022076413526017224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338ef8e983028f84ba3b0f19c10b835f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToChangeInto: 11

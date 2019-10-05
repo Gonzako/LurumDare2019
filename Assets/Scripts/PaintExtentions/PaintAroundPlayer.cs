@@ -32,10 +32,13 @@ public class PaintAroundPlayer : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        brush.RotateAngle += 2;
         Debug.Log("OntriggerStay worked");
         bool success = true;
         var stuff = other.transform.GetComponent<InkCanvas>();
-        if (stuff != null)
+        var data = other.transform.GetComponent<PaintableObjectData>();
+
+        if (stuff != null && !data.IsPainted)
             
                 switch (useMethodType)
                 {
@@ -45,7 +48,8 @@ public class PaintAroundPlayer : MonoBehaviour
 
                     case UseMethodType.WorldPoint:
                         success = erase ? stuff.Erase(brush, other.transform.position) : stuff.Paint(brush, other.transform.position+offSet);
-                        break;
+                        data.IsPainted = true;
+                    break;
 
                     case UseMethodType.NearestSurfacePoint:
                         //success = erase ? paintObject.EraseNearestTriangleSurface(brush, hitInfo.point) : paintObject.PaintNearestTriangleSurface(brush, hitInfo.point);
