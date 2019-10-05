@@ -32,7 +32,9 @@ public class PaintAroundPlayer : MonoBehaviour
 
     private void Update()
     {
-        brush.RotateAngle += 2*Time.deltaTime;
+        brush.RotateAngle += 40*Time.deltaTime;
+        if (brush.RotateAngle > 360)
+            brush.RotateAngle = 0;
     }
 
     private void OnTriggerStay2D(Collider2D other)
