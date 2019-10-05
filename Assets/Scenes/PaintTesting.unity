@@ -1038,6 +1038,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 4105369800120507231, guid: ef2f79b6a51f1bb418ff9d86cf19a652,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6183906175696493054, guid: ef2f79b6a51f1bb418ff9d86cf19a652,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2508,22 +2513,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 6750129750612034375, guid: ef2f79b6a51f1bb418ff9d86cf19a652,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 3777990759889238151, guid: ef2f79b6a51f1bb418ff9d86cf19a652,
         type: 3}
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 9022076413526017224, guid: ef2f79b6a51f1bb418ff9d86cf19a652,
+    - target: {fileID: 6750129750612034375, guid: ef2f79b6a51f1bb418ff9d86cf19a652,
         type: 3}
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 666428097440793920, guid: ef2f79b6a51f1bb418ff9d86cf19a652,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022076413526017224, guid: ef2f79b6a51f1bb418ff9d86cf19a652,
         type: 3}
       propertyPath: m_Layer
       value: 11
@@ -2899,7 +2904,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
