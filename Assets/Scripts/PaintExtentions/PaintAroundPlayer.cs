@@ -30,9 +30,14 @@ public class PaintAroundPlayer : MonoBehaviour
         Debug.Log("me cago en tó");
     }
 
+    private void Update()
+    {
+        brush.RotateAngle += 2*Time.deltaTime;
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
-        brush.RotateAngle += 2;
+
         Debug.Log("OntriggerStay worked");
         bool success = true;
         var stuff = other.transform.GetComponent<InkCanvas>();
