@@ -22,14 +22,15 @@ public class CharacterGrounding : MonoBehaviour
     public Vector2 GroundedDirection { get; private set; }
 
     private void Update()
-    {
+    {       
+
         foreach (var position in positions)
         {
-            CheckFootForGroundingTransform(position);
+            CheckFootForGroundingTransform(position);            
             if (IsGrounded)
                 break;
         }
-        
+
         StickToMovingObjects();
 
     }
@@ -55,9 +56,9 @@ public class CharacterGrounding : MonoBehaviour
     
     private void CheckFootForGroundingTransform(Transform foot)
     {
-        var raycastHit = Physics2D.Raycast(foot.position, foot.forward, maxDistance, layerMask);
+        var raycastHit = Physics2D.Raycast(foot.position, -foot.up, maxDistance, layerMask);
 
-        Debug.DrawRay(foot.position, foot.forward * maxDistance, Color.red);
+        Debug.DrawRay(foot.position, -foot.up * maxDistance, Color.red);
 
         if (raycastHit.collider != null)
         {
@@ -67,7 +68,7 @@ public class CharacterGrounding : MonoBehaviour
             }
             groundedObject = raycastHit.collider.transform;
             IsGrounded = true;
-            GroundedDirection = foot.forward;
+            GroundedDirection = -foot.up;
         }
         else
         {
