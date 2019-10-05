@@ -21,10 +21,14 @@ public class PlayerMovementController : MonoBehaviour, IMove
 
     public float Speed { get; private set; }
 
+    private AudioSource audioSource;
+    public AudioClip[] sndJump;
+
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         characterGrounding = GetComponent<CharacterGrounding>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     //button checks in update to see if we pressed the button during the last frame
@@ -34,6 +38,7 @@ public class PlayerMovementController : MonoBehaviour, IMove
         if (Input.GetButtonDown("Jump") && characterGrounding.IsGrounded)
         {
             rigidbody2D.AddForce(Vector2.up * jumpForce);
+            PlayJumpSound();
 
             if (characterGrounding.GroundedDirection != Vector2.down)
             {
@@ -55,5 +60,11 @@ public class PlayerMovementController : MonoBehaviour, IMove
     internal void Bounce()
     {
         rigidbody2D.AddForce(Vector2.up * bounceForce);
+    }
+
+    private void PlayJumpSound()
+    {
+        audioSource.clip = sndJump[UnityEngine.Random.Range(0, sndJump.Length)];
+        audioSource.Play();
     }
 }
