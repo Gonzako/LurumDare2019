@@ -2,42 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorChange : MonoBehaviour
+namespace Es.InkPainter.Sample
 {
 
-    public Color[] colors = new Color[3];
-    SpriteRenderer sprite;
-    private int colorIndex = 0;
-     
-
-    // Start is called before the first frame update
-    void Start()
+    public class ColorChange : MonoBehaviour
     {
-        sprite = GetComponent<SpriteRenderer>();
-        sprite.color = colors[colorIndex];
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
+        public Color[] colors = new Color[3];
+        SpriteRenderer sprite;
+        private int colorIndex = 0;
+        private PaintAroundPlayer paintAround;
+
+        // Start is called before the first frame update
+        void Start()
         {
-            ChangeColor();
+            sprite = GetComponent<SpriteRenderer>();
+            sprite.color = colors[colorIndex];
+            paintAround = GetComponentInChildren<PaintAroundPlayer>();
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                ChangeColor();
+            }
+        }
+
+        private void ChangeColor()
+        {
+            colorIndex++;
+            if (colorIndex != 3)
+            {
+                sprite.color = colors[colorIndex];
+                paintAround.brush.Color = colors[colorIndex];
+            }
+            else if (colorIndex == 3)
+            {
+                colorIndex = 0;
+                sprite.color = colors[colorIndex];
+                paintAround.brush.Color = colors[colorIndex];
+            }
+
         }
     }
 
-    private void ChangeColor()
-    {
-        colorIndex++;
-        if (colorIndex != 3)
-        {
-            sprite.color = colors[colorIndex];
-        }else if(colorIndex == 3)
-        {
-            colorIndex = 0;
-            sprite.color = colors[colorIndex];
-        }
-        
-    }
 
 }
