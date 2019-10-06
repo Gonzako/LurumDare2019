@@ -32,7 +32,8 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             //GameManager Logic
-            RestartGame();
+            currentLevelIndex++;
+            //RestartGame();
         }        
     }
 
