@@ -464,8 +464,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colors:
   - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 1, g: 0.77952445, b: 0, a: 1}
-  - {r: 0, g: 0.55897856, b: 1, a: 1}
+  - {r: 0, g: 0.21154404, b: 1, a: 1}
+  - {r: 0.17515779, g: 1, b: 0, a: 1}
 --- !u!1 &563071723368153830
 GameObject:
   m_ObjectHideFlags: 0
