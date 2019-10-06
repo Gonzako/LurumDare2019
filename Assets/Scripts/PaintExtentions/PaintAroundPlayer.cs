@@ -19,8 +19,8 @@ public class PaintAroundPlayer : MonoBehaviour
     [SerializeField]
     Vector3 offSet;
     [SerializeField]
-    private Brush brush;
-    public LayerMask layerToProapaget;
+    public Brush brush;
+    public LayerMask layerToPropagate;
     [SerializeField]
     private UseMethodType useMethodType = UseMethodType.WorldPoint;
     [SerializeField]
@@ -48,14 +48,14 @@ public class PaintAroundPlayer : MonoBehaviour
         {
             for (int j = 0; j < 2; j++)
             {
-                RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector3.up * i + Vector3.left * j, 1, layerToProapaget);
+                RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector3.up * i + Vector3.right * j, 1, layerToPropagate);
                 if (hit.collider != null)
                 {
                     var paintObject = hit.collider.GetComponent<InkCanvas>();
                     if(paintObject != null)
                     {
                         Debug.Log("Tried to paint neighbour1");
-                        paintObject.Paint(brush, worldPos, null, cam);
+                        paintObject.Paint(brush, hit.point, null, cam);
                     }
 
                 }
