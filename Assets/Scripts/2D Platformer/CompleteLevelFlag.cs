@@ -6,6 +6,9 @@ public class CompleteLevelFlag : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.Instance.MoveToNextLevel();
+        if (collision.gameObject.CompareTag("player"))
+        {
+            GameManager.Instance.MoveToNextLevel();
+        }       
     }
 }
