@@ -33,8 +33,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             //GameManager Logic
             RestartGame();
-        }
-        
+        }        
     }
 
     internal void KillPlayer()
@@ -48,7 +47,7 @@ public class GameManager : MonoBehaviour
 
         if (Lives <= 0)
         {
-            RestartGame();
+            RestartLevel();
         }
 
         else
@@ -80,6 +79,11 @@ public class GameManager : MonoBehaviour
     public void MoveToNextLevel()
     {
         currentLevelIndex++;
+        SceneManager.LoadScene(currentLevelIndex);
+    }
+
+    private void RestartLevel()
+    {
         SceneManager.LoadScene(currentLevelIndex);
     }
 
