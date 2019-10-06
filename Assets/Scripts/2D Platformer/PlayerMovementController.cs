@@ -25,6 +25,8 @@ public class PlayerMovementController : MonoBehaviour, IMove
     public AudioClip[] sndJump;
     public AudioClip[] sndPaint;
 
+    bool isMovingForward = true;
+
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
@@ -58,6 +60,16 @@ public class PlayerMovementController : MonoBehaviour, IMove
         Speed = horizontal;
 
         Vector3 movement = new Vector3(horizontal, 0);
+
+        if (horizontal > 0f && !isMovingForward)
+        {
+            transform.GetChild(2).localScale = new Vector3(1, 1, 1);
+            isMovingForward = true;
+        } else if (horizontal < 0f && isMovingForward)
+        {
+            transform.GetChild(2).localScale = new Vector3(-1, 1, 1);
+            isMovingForward = false;
+        }
 
         transform.position += movement * Time.deltaTime * moveSpeed;
     }

@@ -28,14 +28,7 @@ public class FinalSceneManager : MonoBehaviour
 
     public void TextValue()
     {
-        if (CONST.playerWon)
-        {
-            txtMessage.text = "Congrats!\nYou won!";
-        }
-        else
-        {
-            txtMessage.text = "Sorry . . .\nYou lost!";
-        }
+        txtMessage.text = "Congrats!\nYou won!";
     }
 
     public void ChangeSFXValue()
