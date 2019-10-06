@@ -24,7 +24,7 @@ public class CharacterGrounding : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip[] sndJumpEnds;
     bool sndAlreadyPlayed;
-
+    Animator animator;
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();

@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
   numbersThatCanBePainted: 15
-  timeToWait: 0.2
+  timeToWait: 0.1
   indiceColor: 2
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
@@ -358,7 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
   numbersThatCanBePainted: 15
-  timeToWait: 0.2
+  timeToWait: 0.1
   indiceColor: 2
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
@@ -553,7 +553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
   numbersThatCanBePainted: 15
-  timeToWait: 0.2
+  timeToWait: 0.1
   indiceColor: 2
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
   numbersThatCanBePainted: 15
-  timeToWait: 0.2
+  timeToWait: 0.1
   indiceColor: 2
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
@@ -978,7 +978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
   numbersThatCanBePainted: 15
-  timeToWait: 0.2
+  timeToWait: 0.1
   indiceColor: 2
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
