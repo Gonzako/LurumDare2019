@@ -39,8 +39,12 @@ public class MenuManager : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         if(obj == "nextLevel")
         {
+            GameManager.Instance.MoveToNextLevel();
+            /*
+            FindObjectOfType<GameManager>().currentLevelIndex++;
             SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            */
         }
         if(obj == "changeMusic")
         {
