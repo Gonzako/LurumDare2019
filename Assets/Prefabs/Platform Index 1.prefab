@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5076223630294331220}
   - component: {fileID: 7739995204002997169}
   - component: {fileID: 8975261399029909777}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Quad (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 692588153460412888}
   - component: {fileID: 3604412756908183761}
   - component: {fileID: 2757491388508265100}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Quad (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 7009898978827524761}
   - component: {fileID: 5053592977933920525}
   - component: {fileID: 2047196076167089991}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Quad (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6183906175696493054}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Platform Index 2only 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 8513452085974028808}
   - component: {fileID: 2777150419355867926}
   - component: {fileID: 415585114138948375}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Quad (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,7 +779,7 @@ GameObject:
   - component: {fileID: 2153883828030980265}
   - component: {fileID: 7687359864548747718}
   - component: {fileID: 4594507103405396666}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Quad (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
