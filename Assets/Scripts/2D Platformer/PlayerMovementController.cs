@@ -18,15 +18,16 @@ public class PlayerMovementController : MonoBehaviour, IMove
 
     private new Rigidbody2D rigidbody2D;
     private CharacterGrounding characterGrounding;
-
+    
     public float Speed { get; private set; }
-
+    private Animator animator;
     private AudioSource audioSource;
     public AudioClip[] sndJump;
     public AudioClip[] sndPaint;
 
     private void Awake()
     {
+        animator = GetComponentInChildren<Animator>();
         rigidbody2D = GetComponent<Rigidbody2D>();
         characterGrounding = GetComponent<CharacterGrounding>();
         audioSource = GetComponent<AudioSource>();
@@ -38,9 +39,10 @@ public class PlayerMovementController : MonoBehaviour, IMove
 
         if (Input.GetButtonDown("Jump") && characterGrounding.IsGrounded)
         {
+
             rigidbody2D.AddForce(Vector2.up * jumpForce);
             if (CONST.isSoundEnabled) PlayJumpSound();
-
+            animator.SetBool("IsJumping", true);
             if (characterGrounding.GroundedDirection != Vector2.down)
             {
                 rigidbody2D.AddForce(characterGrounding.GroundedDirection*-1f * wallJumpForce);

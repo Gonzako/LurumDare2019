@@ -8,7 +8,7 @@ public class PaintableObjectData : MonoBehaviour
     public int layerToChangeInto = 11;
     public int numbersThatCanBePainted = 15;
     [SerializeField]
-    private float timeToWait = 0.2f;
+    private float timeToWait = 0.1f;
     private int currentLayer;
     public int indiceColor  = 0;
     public bool canBePainted { get { return checkIfCanBePainted(); } }

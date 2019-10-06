@@ -27,12 +27,15 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("Started");
             audioSource = GetComponent<AudioSource>();
             //Singleton Logic
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            Lives = 3;
             //GameManager Logic
-            currentLevelIndex++;
+            //if(currentLevelIndex == 0)
+            //    currentLevelIndex++;    
             //RestartGame();
         }        
     }
