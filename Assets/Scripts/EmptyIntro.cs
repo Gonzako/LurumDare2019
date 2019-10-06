@@ -26,6 +26,9 @@ public class EmptyIntro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeSinceLevelLoad >= 7f && !conversationalPanel.activeSelf)
+            AdvanceText();
+
         if(moreText && !isWriting)
         {
             moreText = false;
