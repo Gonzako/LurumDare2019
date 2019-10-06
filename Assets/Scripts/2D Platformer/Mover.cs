@@ -14,6 +14,15 @@ public class Mover : MonoBehaviour
     private float positionPercent;
     private int direction = 1;
 
+    private AudioSource audioSource;
+    public AudioClip[] sndSaw;
+    bool sndAlreadyPlayed;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         float distance = Vector3.Distance(start.position, end.position);
@@ -26,9 +35,30 @@ public class Mover : MonoBehaviour
         if (positionPercent >= 1 && direction == 1)
         {
             direction = -1;
-        }else if(positionPercent <=0 && direction == -1)
+            if(gameObject.name.StartsWith("Saw"))
+            {
+                sndAlreadyPlayed = false;
+                PlaySawSound();
+            }
+        }
+        else if(positionPercent <=0 && direction == -1)
         {
             direction = 1;
+            if (gameObject.name.StartsWith("Saw"))
+            {
+                sndAlreadyPlayed = false;
+                PlaySawSound();
+            }
+        }
+    }
+
+    private void PlaySawSound()
+    {
+        if (!audioSource.isPlaying && !sndAlreadyPlayed)
+        {
+            audioSource.clip = sndSaw[UnityEngine.Random.Range(0, sndSaw.Length)];
+            audioSource.Play();
+            sndAlreadyPlayed = true;
         }
     }
 }
