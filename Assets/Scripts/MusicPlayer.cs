@@ -30,7 +30,7 @@ public class MusicPlayer : MonoBehaviour {
                 audioSource.volume = 0f;
             } else
             {
-                audioSource.volume = 1f;
+                audioSource.volume = 0.4f;
             }
         }
     }
