@@ -31,6 +31,37 @@ namespace Es.InkPainter.Sample
         }
 
         private void ChangeColor()
+            if (Input.GetMouseButtonDown(0))
+            {
+                ChangeColor();
+            }
+        }
+
+        public Color getCurrentColour()
+        {
+            colorIndex++;
+            if (colorIndex != 3)
+            {
+                sprite.color = colors[colorIndex];
+                paintAround.brush.Color = colors[colorIndex];
+            }
+            else if (colorIndex == 3)
+            {
+                colorIndex = 0;
+                sprite.color = colors[colorIndex];
+                paintAround.brush.Color = colors[colorIndex];
+            }
+
+            return colors[colorIndex];
+
+        }
+
+        public Color getRandomColour()
+        {
+            return colors[Random.Range(0, colors.Length - 1)];
+        }
+
+        private void ChangeColor()
         {
             colorIndex++;
             if (colorIndex != 3)

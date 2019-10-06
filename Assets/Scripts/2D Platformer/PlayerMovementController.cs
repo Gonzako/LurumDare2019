@@ -39,7 +39,7 @@ public class PlayerMovementController : MonoBehaviour, IMove
         if (Input.GetButtonDown("Jump") && characterGrounding.IsGrounded)
         {
             rigidbody2D.AddForce(Vector2.up * jumpForce);
-            PlayJumpSound();
+            if (CONST.isSoundEnabled) PlayJumpSound();
 
             if (characterGrounding.GroundedDirection != Vector2.down)
             {
@@ -47,7 +47,7 @@ public class PlayerMovementController : MonoBehaviour, IMove
             }
         }
 
-        PlayPaintSound();
+        if (CONST.isSoundEnabled) PlayPaintSound();
     }
 
     private void FixedUpdate()

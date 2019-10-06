@@ -32,7 +32,8 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             //GameManager Logic
-            RestartGame();
+            currentLevelIndex++;
+            //RestartGame();
         }        
     }
 
@@ -78,7 +79,9 @@ public class GameManager : MonoBehaviour
 
     public void MoveToNextLevel()
     {
+        Debug.Log("Nivel: " + currentLevelIndex);
         currentLevelIndex++;
+        Debug.Log("Nivel: " + currentLevelIndex);
         SceneManager.LoadScene(currentLevelIndex);
     }
 
@@ -89,7 +92,7 @@ public class GameManager : MonoBehaviour
 
     private void RestartGame()
     {
-        currentLevelIndex = 0;
+        currentLevelIndex = 1;
 
         Lives = 3;
         coins = 0;
@@ -97,7 +100,7 @@ public class GameManager : MonoBehaviour
         {
             OnCoinsChanged(coins);
         }
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(currentLevelIndex);
     }
 
     private void PlayDeathSound()
