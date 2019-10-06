@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
 
         if (Lives <= 0)
         {
-            RestartGame();
+            RestartLevel();
         }
 
         else
@@ -80,6 +80,11 @@ public class GameManager : MonoBehaviour
     public void MoveToNextLevel()
     {
         currentLevelIndex++;
+        SceneManager.LoadScene(currentLevelIndex);
+    }
+
+    private void RestartLevel()
+    {
         SceneManager.LoadScene(currentLevelIndex);
     }
 
