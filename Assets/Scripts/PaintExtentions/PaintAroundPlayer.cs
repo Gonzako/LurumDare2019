@@ -33,13 +33,34 @@ public class PaintAroundPlayer : MonoBehaviour
     {
         RaycastHit2D _hit = Physics2D.Raycast(transform.position, transform.position - otherCol.transform.position);
         Vector3 _point = _hit.point + UnityEngine.Random.insideUnitCircle * randomWeight;
-        CheckForNeighBours(_point, otherCol);
+
         return _point;
     }
 
     private void CheckForNeighBours(Vector3 worldPos, Collider2D origin)
     {
-        
+        var lastLayer = origin.gameObject.layer;
+        origin.gameObject.layer = Physics2D.IgnoreRaycastLayer;
+
+        for (int i = -1; i < 2; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector3.up * i + Vector3.left * j, brush.BrushTexture.width*brush.Scale, LayerMask.NameToLayer("SinPintar"));
+                if (hit)
+                {
+                    var paintObject = hit.collider.GetComponent<InkCanvas>();
+                    if(paintObject != null)
+                    {
+                        paintObject.Paint(brush, worldPos);
+                    }
+
+                }
+            
+            }
+        }
+        origin.gameObject.layer = lastLayer;
+           
     }
 
     #region UnityAPI
@@ -57,8 +78,9 @@ public class PaintAroundPlayer : MonoBehaviour
         var stuff = other.transform.GetComponent<InkCanvas>();
         var data = other.transform.GetComponent<PaintableObjectData>();
         var pointOfContact = getPointOfContact(other);
-        if (stuff != null  && data.canBePainted)
-
+        if (stuff != null && data.canBePainted)
+        {
+            CheckForNeighBours(pointOfContact, other);
             switch (useMethodType)
             {
                 case UseMethodType.RaycastHitInfo:
@@ -83,7 +105,7 @@ public class PaintAroundPlayer : MonoBehaviour
                     */
                     break;
             }
-
+        }
         if (!success)
             Debug.LogError("Failed to paint.");
     } 

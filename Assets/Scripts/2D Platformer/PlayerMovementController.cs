@@ -75,7 +75,7 @@ public class PlayerMovementController : MonoBehaviour, IMove
     {
         if (!audioSource.isPlaying && PaintableObjectData.paintingSound)
         {
-            audioSource.clip = sndPaint[UnityEngine.Random.Range(0, sndPaint.Length)];
+            audioSource.clip = sndPaint[UnityEngine.Random.Range(0, sndPaint.Length-1)];
             audioSource.Play();
         }
     }
