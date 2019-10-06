@@ -40,7 +40,9 @@ public class PaintAroundPlayer : MonoBehaviour
     private void CheckForNeighBours(Vector3 worldPos, Collider2D origin)
     {
 
-        Debug.Log("Tried to paint neighbour0");
+#if UNITY_EDITOR
+        Debug.Log("Tried to paint neighbour0"); 
+#endif
         var lastLayer = origin.gameObject.layer;
         origin.gameObject.layer = Physics2D.IgnoreRaycastLayer;
 
@@ -54,7 +56,9 @@ public class PaintAroundPlayer : MonoBehaviour
                     var paintObject = hit.collider.GetComponent<InkCanvas>();
                     if(paintObject != null)
                     {
-                        Debug.Log("Tried to paint neighbour1");
+#if UNITY_EDITOR
+                        Debug.Log("Tried to paint neighbour1"); 
+#endif
                         paintObject.Paint(brush, hit.point, null, cam);
                     }
 
@@ -76,8 +80,10 @@ public class PaintAroundPlayer : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
 
-            Debug.Log("OntriggerStay worked");
-            bool success = true;
+#if UNITY_EDITOR
+        Debug.Log("OntriggerStay worked"); 
+#endif
+        bool success = true;
             var stuff = other.transform.GetComponent<InkCanvas>();
             var data = other.transform.GetComponent<PaintableObjectData>();
             var pointOfContact = getPointOfContact(other);

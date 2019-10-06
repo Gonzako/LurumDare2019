@@ -24,7 +24,7 @@ public class CharacterGrounding : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip[] sndJumpEnds;
     bool sndAlreadyPlayed;
-    Animator animator;
+
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -70,7 +70,9 @@ public class CharacterGrounding : MonoBehaviour
     {
         var raycastHit = Physics2D.Raycast(foot.position, foot.forward, maxDistance, layerMask);
 
-        Debug.DrawRay(foot.position, foot.forward * maxDistance, Color.red);
+#if UNITY_EDITOR
+        Debug.DrawRay(foot.position, foot.forward * maxDistance, Color.red); 
+#endif
 
         if (raycastHit.collider != null)
         {

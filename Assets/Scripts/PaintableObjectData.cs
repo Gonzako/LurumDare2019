@@ -33,7 +33,10 @@ public class PaintableObjectData : MonoBehaviour
             if (Time.time > counter)
             {
                 paintingSound = true;
-                Debug.Log("PaintSound");
+
+#if UNITY_EDITOR
+                Debug.Log("PaintSound"); 
+#endif
                 counter = Time.time + timeToWait;
                 numbersPainted++;
                 isPainted = true;
@@ -50,8 +53,10 @@ public class PaintableObjectData : MonoBehaviour
             {
 
                 paintingSound = true;
-                Debug.Log("PaintSound");
-                counter = Time.time + timeToWait;
+#if UNITY_EDITOR
+            Debug.Log("PaintSound"); 
+#endif
+            counter = Time.time + timeToWait;
                 numbersPainted++;
                 isPainted = true;
                 changeLayerToWalkable();
