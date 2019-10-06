@@ -38,7 +38,7 @@ public class Mover : MonoBehaviour
             if(gameObject.name.StartsWith("Saw"))
             {
                 sndAlreadyPlayed = false;
-                PlaySawSound();
+                if (CONST.isSoundEnabled) PlaySawSound();
             }
         }
         else if(positionPercent <=0 && direction == -1)
@@ -47,7 +47,7 @@ public class Mover : MonoBehaviour
             if (gameObject.name.StartsWith("Saw"))
             {
                 sndAlreadyPlayed = false;
-                PlaySawSound();
+                if (CONST.isSoundEnabled) PlaySawSound();
             }
         }
     }
