@@ -39,6 +39,8 @@ public class PaintAroundPlayer : MonoBehaviour
 
     private void CheckForNeighBours(Vector3 worldPos, Collider2D origin)
     {
+
+        Debug.Log("Tried to paint neighbour0");
         var lastLayer = origin.gameObject.layer;
         origin.gameObject.layer = Physics2D.IgnoreRaycastLayer;
 
@@ -46,13 +48,14 @@ public class PaintAroundPlayer : MonoBehaviour
         {
             for (int j = 0; j < 2; j++)
             {
-                RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector3.up * i + Vector3.left * j, brush.BrushTexture.width*brush.Scale, LayerMask.NameToLayer("SinPintar"));
-                if (hit)
+                RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector3.up * i + Vector3.left * j, 10, LayerMask.NameToLayer("SinPintar"));
+                if (hit.collider != null)
                 {
                     var paintObject = hit.collider.GetComponent<InkCanvas>();
                     if(paintObject != null)
                     {
-                        paintObject.Paint(brush, worldPos);
+                        Debug.Log("Tried to paint neighbour1");
+                        paintObject.Paint(brush, worldPos, null, cam);
                     }
 
                 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class PaintableObjectData : MonoBehaviour
 {
     public int layerToChangeInto = 11;
-    public int numbersThatCanBePainted = 3;
+    public int numbersThatCanBePainted = 15;
     [SerializeField]
     private float timeToWait = 0.2f;
     private int currentLayer;

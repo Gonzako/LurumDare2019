@@ -160,7 +160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
-  numbersThatCanBePainted: 3
+  numbersThatCanBePainted: 15
+  timeToWait: 0.2
 --- !u!1 &1599945009045838779
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
-  numbersThatCanBePainted: 3
+  numbersThatCanBePainted: 15
+  timeToWait: 0.2
 --- !u!1 &3777990759889238151
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +484,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
-  numbersThatCanBePainted: 3
+  numbersThatCanBePainted: 15
+  timeToWait: 0.2
 --- !u!1 &4105369800120507231
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,7 +681,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
-  numbersThatCanBePainted: 3
+  numbersThatCanBePainted: 15
+  timeToWait: 0.2
 --- !u!1 &9022076413526017224
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,4 +843,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerToChangeInto: 11
-  numbersThatCanBePainted: 3
+  numbersThatCanBePainted: 15
+  timeToWait: 0.2
