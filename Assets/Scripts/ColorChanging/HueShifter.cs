@@ -8,12 +8,12 @@ public class HueShifter : MonoBehaviour
     public Color[] Colors;
     public float Speed = 5;
     int _currentIndex = 0;
-    Material _mat;
+    SpriteRenderer _spr;
     bool _shouldChange = false;
 
     void Start()
     {
-        _mat = GetComponent<Material>();
+        _spr = GetComponent<SpriteRenderer>();
 
         _currentIndex = 0;
         SetColor(Colors[_currentIndex]);
@@ -21,7 +21,7 @@ public class HueShifter : MonoBehaviour
 
     public void SetColor(Color color)
     {
-        _mat.color = color;
+        _spr.color = color;        
     }
 
     public void Cycle()
@@ -33,15 +33,14 @@ public class HueShifter : MonoBehaviour
     {
         if (_shouldChange)
         {
-            var startColor = _mat.color;
+            var startColor = _spr.color;
 
             var endColor = Colors[0];
             if (_currentIndex + 1 < Colors.Length)
             {
                 endColor = Colors[_currentIndex + 1];
             }
-
-
+            
             var newColor = Color.Lerp(startColor, endColor, Time.deltaTime * Speed);
             SetColor(newColor);
 
