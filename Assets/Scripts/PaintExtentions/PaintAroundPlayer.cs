@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Es.InkPainter;
+using System;
+
 public class PaintAroundPlayer : MonoBehaviour
 {       /// <summary>
         /// Types of methods used to paint.
@@ -30,8 +32,14 @@ public class PaintAroundPlayer : MonoBehaviour
     private Vector3 getPointOfContact(Collider2D otherCol)
     {
         RaycastHit2D _hit = Physics2D.Raycast(transform.position, transform.position - otherCol.transform.position);
-        Vector3 point = _hit.point + Random.insideUnitCircle * randomWeight;
-        return _hit.point;
+        Vector3 _point = _hit.point + UnityEngine.Random.insideUnitCircle * randomWeight;
+        CheckForNeighBours(_point, otherCol);
+        return _point;
+    }
+
+    private void CheckForNeighBours(Vector3 worldPos, Collider2D origin)
+    {
+        
     }
 
     #region UnityAPI
