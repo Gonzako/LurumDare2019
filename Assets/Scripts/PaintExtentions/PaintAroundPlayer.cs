@@ -75,8 +75,7 @@ public class PaintAroundPlayer : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetButton("Fire1"))
-        {
+
             Debug.Log("OntriggerStay worked");
             bool success = true;
             var stuff = other.transform.GetComponent<InkCanvas>();
@@ -112,7 +111,7 @@ public class PaintAroundPlayer : MonoBehaviour
             }
             if (!success)
                 Debug.LogError("Failed to paint.");
-        }
+       
     } 
     #endregion
 }
