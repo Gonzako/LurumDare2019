@@ -33,8 +33,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             //GameManager Logic
             RestartGame();
-        }
-        
+        }        
     }
 
     internal void KillPlayer()

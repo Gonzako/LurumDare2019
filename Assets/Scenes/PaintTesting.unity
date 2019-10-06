@@ -334,6 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 214841510}
   - component: {fileID: 214841511}
+  - component: {fileID: 214841512}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -404,6 +405,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &214841512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214841509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e1d5bef34115b4fbffaccf5c4c9fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0.40936995, b: 1, a: 1}
+  - {r: 1, g: 0.99296916, b: 0, a: 1}
 --- !u!1 &222105698
 GameObject:
   m_ObjectHideFlags: 0
