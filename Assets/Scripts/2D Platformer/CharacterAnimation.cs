@@ -22,10 +22,12 @@ public class CharacterAnimation : MonoBehaviour
 
         if (speed == 0)
         {
-            animator.SetBool("isRunning", false);
+            animator.SetBool("isMoving", false);
             Debug.Log("NOT FCKIN RUNNING");
         }
         else {
+            animator.SetBool("isMoving", true);
+            Debug.Log("IS RUNNING");
             spriteRenderer.flipX = speed > 0;
         }
     }
