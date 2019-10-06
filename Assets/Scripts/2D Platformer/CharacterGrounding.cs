@@ -57,7 +57,7 @@ public class CharacterGrounding : MonoBehaviour
             groundedObjectLastPosition = groundedObject.position;
 
             if (IsGrounded && !sndAlreadyPlayed)
-                PlayJumpEndsSound();
+                if (CONST.isSoundEnabled) PlayJumpEndsSound();
         }
         else
         {

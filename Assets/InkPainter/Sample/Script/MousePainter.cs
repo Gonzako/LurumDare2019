@@ -66,7 +66,7 @@ namespace Es.InkPainter.Sample
 		{
 			if(GUILayout.Button("Reset"))
 			{
-                transform.parent.position = new Vector3(-12.18f, -1.58f, 0);
+                FindObjectOfType<PlayerMovementController>().transform.position = new Vector3(-12.18f, -1.58f, 0);
 				foreach(var canvas in FindObjectsOfType<InkCanvas>())
 					canvas.ResetPaint();
 			}

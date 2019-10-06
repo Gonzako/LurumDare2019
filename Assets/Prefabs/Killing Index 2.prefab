@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 7798005314938311279}
   - component: {fileID: 5076223630294331220}
   - component: {fileID: 7739995204002997169}
-  - component: {fileID: 8975261399029909777}
+  - component: {fileID: 6070415531450126129}
+  - component: {fileID: 515355327}
   m_Layer: 10
   m_Name: Quad (5)
   m_TagString: Untagged
@@ -30,13 +31,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666428097440793920}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3826832, w: 0.9238796}
+  m_LocalPosition: {x: -2, y: -0.00000023841858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6183906175696493054}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45.000004}
 --- !u!33 &7860959499206759332
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -163,10 +164,10 @@ MonoBehaviour:
   layerToChangeInto: 11
   numbersThatCanBePainted: 15
   timeToWait: 0.2
-  indiceColor: 1
+  indiceColor: 2
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
---- !u!114 &8975261399029909777
+--- !u!114 &6070415531450126129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,6 +183,18 @@ MonoBehaviour:
   eraseRenderer: 0
   originalLayer: 0
   originalMaterials: []
+--- !u!114 &515355327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666428097440793920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119141403a2ff9544b3adbd8d4df92f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1599945009045838779
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +210,8 @@ GameObject:
   - component: {fileID: 7494595783158375457}
   - component: {fileID: 692588153460412888}
   - component: {fileID: 3604412756908183761}
-  - component: {fileID: 2757491388508265100}
+  - component: {fileID: 4185465565155482459}
+  - component: {fileID: 1555457817}
   m_Layer: 10
   m_Name: Quad (1)
   m_TagString: Untagged
@@ -212,13 +226,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599945009045838779}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3826832, w: 0.9238796}
+  m_LocalPosition: {x: -1, y: -0.00000011920929, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6183906175696493054}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45.000004}
 --- !u!33 &4497917131330191481
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -345,10 +359,10 @@ MonoBehaviour:
   layerToChangeInto: 11
   numbersThatCanBePainted: 15
   timeToWait: 0.2
-  indiceColor: 1
+  indiceColor: 2
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
---- !u!114 &2757491388508265100
+--- !u!114 &4185465565155482459
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -364,6 +378,18 @@ MonoBehaviour:
   eraseRenderer: 0
   originalLayer: 0
   originalMaterials: []
+--- !u!114 &1555457817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599945009045838779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119141403a2ff9544b3adbd8d4df92f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3777990759889238151
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +405,8 @@ GameObject:
   - component: {fileID: 8639045977209227006}
   - component: {fileID: 7009898978827524761}
   - component: {fileID: 5053592977933920525}
-  - component: {fileID: 2047196076167089991}
+  - component: {fileID: 5612808647286905694}
+  - component: {fileID: 477649713}
   m_Layer: 10
   m_Name: Quad (3)
   m_TagString: Untagged
@@ -394,13 +421,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3777990759889238151}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.38268325, w: 0.9238797}
+  m_LocalPosition: {x: 1.0000002, y: 0.00000011920929, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6183906175696493054}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45.000004}
 --- !u!33 &652096064320919436
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -527,10 +554,10 @@ MonoBehaviour:
   layerToChangeInto: 11
   numbersThatCanBePainted: 15
   timeToWait: 0.2
-  indiceColor: 1
+  indiceColor: 2
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
---- !u!114 &2047196076167089991
+--- !u!114 &5612808647286905694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -546,6 +573,18 @@ MonoBehaviour:
   eraseRenderer: 0
   originalLayer: 0
   originalMaterials: []
+--- !u!114 &477649713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777990759889238151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119141403a2ff9544b3adbd8d4df92f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4105369800120507231
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6183906175696493054}
   m_Layer: 10
-  m_Name: Platform Index 2only 2
+  m_Name: Killing Index 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -596,7 +635,8 @@ GameObject:
   - component: {fileID: 6856334801773969444}
   - component: {fileID: 8513452085974028808}
   - component: {fileID: 2777150419355867926}
-  - component: {fileID: 415585114138948375}
+  - component: {fileID: 2161106967944458639}
+  - component: {fileID: 1982283186}
   m_Layer: 10
   m_Name: Quad (2)
   m_TagString: Untagged
@@ -611,13 +651,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6750129750612034375}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.38268325, w: 0.9238797}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6183906175696493054}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45.000004}
 --- !u!33 &7841887868181811537
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -744,10 +784,10 @@ MonoBehaviour:
   layerToChangeInto: 11
   numbersThatCanBePainted: 15
   timeToWait: 0.2
-  indiceColor: 1
+  indiceColor: 2
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
---- !u!114 &415585114138948375
+--- !u!114 &2161106967944458639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -763,6 +803,18 @@ MonoBehaviour:
   eraseRenderer: 0
   originalLayer: 0
   originalMaterials: []
+--- !u!114 &1982283186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750129750612034375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119141403a2ff9544b3adbd8d4df92f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9022076413526017224
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +830,8 @@ GameObject:
   - component: {fileID: 2658695674438374802}
   - component: {fileID: 2153883828030980265}
   - component: {fileID: 7687359864548747718}
-  - component: {fileID: 4594507103405396666}
+  - component: {fileID: 9120359665336545183}
+  - component: {fileID: 81307235}
   m_Layer: 10
   m_Name: Quad (4)
   m_TagString: Untagged
@@ -793,13 +846,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9022076413526017224}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.99, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 1.99, y: 0.00000023841858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6183906175696493054}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45.000004}
 --- !u!33 &942586920021555425
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -926,10 +979,10 @@ MonoBehaviour:
   layerToChangeInto: 11
   numbersThatCanBePainted: 15
   timeToWait: 0.2
-  indiceColor: 1
+  indiceColor: 2
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
---- !u!114 &4594507103405396666
+--- !u!114 &9120359665336545183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -945,3 +998,15 @@ MonoBehaviour:
   eraseRenderer: 0
   originalLayer: 0
   originalMaterials: []
+--- !u!114 &81307235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9022076413526017224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119141403a2ff9544b3adbd8d4df92f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
