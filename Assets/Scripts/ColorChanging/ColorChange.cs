@@ -30,6 +30,17 @@ namespace Es.InkPainter.Sample
             }
         }
 
+        public Color getCurrentColour()
+        {
+            return colors[colorIndex];
+
+        }
+
+        public Color getRandomColour()
+        {
+            return colors[Random.Range(0, colors.Length - 1)];
+        }
+
         private void ChangeColor()
         {
             colorIndex++;
