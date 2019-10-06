@@ -734,8 +734,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e7254e2ed88337448808a2b9293fcff3, type: 3}
   - {fileID: 8300000, guid: 328b58d1915ca214081d27289957acc7, type: 3}
   sndPaint:
-  - {fileID: 8300000, guid: 13546daf0ca4cd44abc8ef39b48f5410, type: 3}
-  - {fileID: 8300000, guid: 14f32e9a380be654b8a5d69fb3d488fb, type: 3}
+  - {fileID: 8300000, guid: bf823375d27b7664c8427cef953253f0, type: 3}
+  - {fileID: 8300000, guid: 60d285e7e08a0004c92d9b52c13b8dde, type: 3}
+  - {fileID: 8300000, guid: 815c15b7eab8bec49a5b984230caceaf, type: 3}
 --- !u!114 &563071723606231526
 MonoBehaviour:
   m_ObjectHideFlags: 0
