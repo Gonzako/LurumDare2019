@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public int coins;
     public int currentLevelIndex;
 
+    private AudioSource audioSource;
+    public AudioClip[] sndDeath;
+
     private void Awake()
     {
         if (Instance != null)
@@ -24,6 +27,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            audioSource = GetComponent<AudioSource>();
             //Singleton Logic
             Instance = this;
             DontDestroyOnLoad(gameObject);
@@ -36,7 +40,7 @@ public class GameManager : MonoBehaviour
     internal void KillPlayer()
     {
         Lives--;
-
+        PlayDeathSound();
         if (OnLivesChanged != null)
         {
             OnLivesChanged(Lives);
@@ -90,5 +94,11 @@ public class GameManager : MonoBehaviour
             OnCoinsChanged(coins);
         }
         SceneManager.LoadScene(0);
+    }
+
+    private void PlayDeathSound()
+    {
+        audioSource.clip = sndDeath[UnityEngine.Random.Range(0, sndDeath.Length)];
+        audioSource.Play();
     }
 }
