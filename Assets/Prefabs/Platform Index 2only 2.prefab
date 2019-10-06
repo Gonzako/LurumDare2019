@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7798005314938311279}
   - component: {fileID: 5076223630294331220}
   - component: {fileID: 7739995204002997169}
+  - component: {fileID: 8975261399029909777}
   m_Layer: 11
   m_Name: Quad (5)
   m_TagString: Untagged
@@ -165,6 +166,22 @@ MonoBehaviour:
   indiceColor: 1
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
+--- !u!114 &8975261399029909777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666428097440793920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1 &1599945009045838779
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +197,7 @@ GameObject:
   - component: {fileID: 7494595783158375457}
   - component: {fileID: 692588153460412888}
   - component: {fileID: 3604412756908183761}
+  - component: {fileID: 2757491388508265100}
   m_Layer: 11
   m_Name: Quad (1)
   m_TagString: Untagged
@@ -330,6 +348,22 @@ MonoBehaviour:
   indiceColor: 1
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
+--- !u!114 &2757491388508265100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599945009045838779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1 &3777990759889238151
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +379,7 @@ GameObject:
   - component: {fileID: 8639045977209227006}
   - component: {fileID: 7009898978827524761}
   - component: {fileID: 5053592977933920525}
+  - component: {fileID: 2047196076167089991}
   m_Layer: 11
   m_Name: Quad (3)
   m_TagString: Untagged
@@ -495,6 +530,22 @@ MonoBehaviour:
   indiceColor: 1
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
+--- !u!114 &2047196076167089991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777990759889238151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1 &4105369800120507231
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6183906175696493054}
   m_Layer: 11
-  m_Name: Platform Index 1 only 1
+  m_Name: Platform Index 2only 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -545,6 +596,7 @@ GameObject:
   - component: {fileID: 6856334801773969444}
   - component: {fileID: 8513452085974028808}
   - component: {fileID: 2777150419355867926}
+  - component: {fileID: 415585114138948375}
   m_Layer: 11
   m_Name: Quad (2)
   m_TagString: Untagged
@@ -695,6 +747,22 @@ MonoBehaviour:
   indiceColor: 1
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
+--- !u!114 &415585114138948375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6750129750612034375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1 &9022076413526017224
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +778,7 @@ GameObject:
   - component: {fileID: 2658695674438374802}
   - component: {fileID: 2153883828030980265}
   - component: {fileID: 7687359864548747718}
+  - component: {fileID: 4594507103405396666}
   m_Layer: 11
   m_Name: Quad (4)
   m_TagString: Untagged
@@ -860,3 +929,19 @@ MonoBehaviour:
   indiceColor: 1
   allowedColour: {r: 0, g: 0, b: 0, a: 0}
   colorLimiter: 1
+--- !u!114 &4594507103405396666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9022076413526017224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 2
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
