@@ -23,8 +23,7 @@ public class PaintableObjectData : MonoBehaviour
     {
         colours = FindObjectOfType<ColorChange>();
         allowedColour = colours.colors[Mathf.Clamp(indiceColor, 0, colours.colors.Length-1)];
-        var _rend = GetComponent<MeshRenderer>();
-        _rend.material.color = allowedColour+Color.black;
+
     }
 
     private bool checkIfCanBePainted()
