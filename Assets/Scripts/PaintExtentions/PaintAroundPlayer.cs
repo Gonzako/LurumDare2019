@@ -75,42 +75,44 @@ public class PaintAroundPlayer : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-
-        Debug.Log("OntriggerStay worked");
-        bool success = true;
-        var stuff = other.transform.GetComponent<InkCanvas>();
-        var data = other.transform.GetComponent<PaintableObjectData>();
-        var pointOfContact = getPointOfContact(other);
-        if (stuff != null && data.canBePainted)
+        if (Input.GetButton("Fire1"))
         {
-            CheckForNeighBours(pointOfContact, other);
-            switch (useMethodType)
+            Debug.Log("OntriggerStay worked");
+            bool success = true;
+            var stuff = other.transform.GetComponent<InkCanvas>();
+            var data = other.transform.GetComponent<PaintableObjectData>();
+            var pointOfContact = getPointOfContact(other);
+            if (stuff != null && data.canBePainted)
             {
-                case UseMethodType.RaycastHitInfo:
-                    //success = erase ? paintObject.Erase(brush, hitInfo) : paintObject.Paint(brush, hitInfo);
-                    break;
+                CheckForNeighBours(pointOfContact, other);
+                switch (useMethodType)
+                {
+                    case UseMethodType.RaycastHitInfo:
+                        //success = erase ? paintObject.Erase(brush, hitInfo) : paintObject.Paint(brush, hitInfo);
+                        break;
 
-                case UseMethodType.WorldPoint:
-                    brush.RotateAngle += 41;
-                    if (brush.RotateAngle > 360)
-                        brush.RotateAngle = brush.RotateAngle - 360;
-                    success = erase ? stuff.Erase(brush, pointOfContact) : stuff.Paint(brush, pointOfContact, null, cam);
-                    break;
+                    case UseMethodType.WorldPoint:
+                        brush.RotateAngle += 41;
+                        if (brush.RotateAngle > 360)
+                            brush.RotateAngle = brush.RotateAngle - 360;
+                        success = erase ? stuff.Erase(brush, pointOfContact) : stuff.Paint(brush, pointOfContact, null, cam);
+                        break;
 
-                case UseMethodType.NearestSurfacePoint:
-                    //success = erase ? paintObject.EraseNearestTriangleSurface(brush, hitInfo.point) : paintObject.PaintNearestTriangleSurface(brush, hitInfo.point);
-                    break;
+                    case UseMethodType.NearestSurfacePoint:
+                        //success = erase ? paintObject.EraseNearestTriangleSurface(brush, hitInfo.point) : paintObject.PaintNearestTriangleSurface(brush, hitInfo.point);
+                        break;
 
-                case UseMethodType.DirectUV:
-                    /*if (!(hitInfo.collider is MeshCollider))
-                        Debug.LogWarning("Raycast may be unexpected if you do not use MeshCollider.");
-                    success = erase ? paintObject.EraseUVDirect(brush, hitInfo.textureCoord) : paintObject.PaintUVDirect(brush, hitInfo.textureCoord);
-                    */
-                    break;
+                    case UseMethodType.DirectUV:
+                        /*if (!(hitInfo.collider is MeshCollider))
+                            Debug.LogWarning("Raycast may be unexpected if you do not use MeshCollider.");
+                        success = erase ? paintObject.EraseUVDirect(brush, hitInfo.textureCoord) : paintObject.PaintUVDirect(brush, hitInfo.textureCoord);
+                        */
+                        break;
+                }
             }
+            if (!success)
+                Debug.LogError("Failed to paint.");
         }
-        if (!success)
-            Debug.LogError("Failed to paint.");
     } 
     #endregion
 }
