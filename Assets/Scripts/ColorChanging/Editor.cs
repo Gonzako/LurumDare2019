@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEditor;
+#if UNITY_EDITOR
 
 [CustomEditor(typeof(HueShifter))]
 class ColorCyclerEditor : Editor
@@ -14,4 +15,5 @@ class ColorCyclerEditor : Editor
             cycler.Cycle();
         }
     }
-}
+} 
+#endif
