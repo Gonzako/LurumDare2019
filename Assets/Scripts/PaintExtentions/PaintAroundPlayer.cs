@@ -20,7 +20,7 @@ public class PaintAroundPlayer : MonoBehaviour
     Vector3 offSet;
     [SerializeField]
     private Brush brush;
-
+    public LayerMask layerToProapaget;
     [SerializeField]
     private UseMethodType useMethodType = UseMethodType.WorldPoint;
     [SerializeField]
@@ -48,7 +48,7 @@ public class PaintAroundPlayer : MonoBehaviour
         {
             for (int j = 0; j < 2; j++)
             {
-                RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector3.up * i + Vector3.left * j, 10, LayerMask.NameToLayer("SinPintar"));
+                RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector3.up * i + Vector3.left * j, 1, layerToProapaget);
                 if (hit.collider != null)
                 {
                     var paintObject = hit.collider.GetComponent<InkCanvas>();
