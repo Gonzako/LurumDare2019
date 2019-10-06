@@ -43,7 +43,9 @@ public class GameManager : MonoBehaviour
     internal void KillPlayer()
     {
         Lives--;
-        PlayDeathSound();
+
+        
+        if (CONST.isSoundEnabled) PlayDeathSound();
         if (OnLivesChanged != null)
         {
             OnLivesChanged(Lives);
@@ -58,6 +60,12 @@ public class GameManager : MonoBehaviour
         {               
             SendPlayerToCheckpoint();
         }
+
+        if (Lives == 0)
+        {
+            Lives = 3;
+        }
+
 
     }
 
@@ -82,9 +90,7 @@ public class GameManager : MonoBehaviour
 
     public void MoveToNextLevel()
     {
-        Debug.Log("Nivel: " + currentLevelIndex);
         currentLevelIndex++;
-        Debug.Log("Nivel: " + currentLevelIndex);
         SceneManager.LoadScene(currentLevelIndex);
     }
 

@@ -42,10 +42,14 @@ public class FinalSceneManager : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         if (obj == "mainMenu")
         {
+            FindObjectOfType<GameManager>().currentLevelIndex = 0;
+            FindObjectOfType<GameManager>().Lives = 3;
             SceneManager.LoadScene(0);
         }
         if (obj == "restartGame")
         {
+            FindObjectOfType<GameManager>().currentLevelIndex = 1;
+            FindObjectOfType<GameManager>().Lives = 3;
             SceneManager.LoadScene(1);
         }
     }
