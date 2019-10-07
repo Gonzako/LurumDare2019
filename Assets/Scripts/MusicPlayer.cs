@@ -23,7 +23,7 @@ public class MusicPlayer : MonoBehaviour {
 
     private void Update()
     {
-        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0)
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 1)
         {
             if (!CONST.isMusicEnabled)
             {
