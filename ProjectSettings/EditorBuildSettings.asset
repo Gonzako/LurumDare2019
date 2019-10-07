@@ -35,6 +35,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BreynartLevels/Level8.unity
     guid: d96e5ed8e3d9ef148848839f76f1f044
+  - enabled: 1
+    path: Assets/Scenes/BreynartLevels/Level9.unity
+    guid: 794fc36f1753d9c43803d64412b394dc
+  - enabled: 1
+    path: Assets/Scenes/BreynartLevels/Level10.unity
+    guid: ab2e0bc5a6e8a864ea93e87db7b30fc2
+  - enabled: 1
+    path: Assets/Scenes/BreynartLevels/Level11.unity
+    guid: 6cf20377684d070429265bb36f9245a1
+  - enabled: 1
+    path: Assets/Scenes/BreynartLevels/Level12.unity
+    guid: 538916f239b6ab841abea24b844fb875
   - enabled: 0
     path: Assets/Scenes/Levels/Level1.unity
     guid: 87e8f3e33f073f148bad0cec2d3bc09f
