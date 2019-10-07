@@ -221,12 +221,14 @@ MonoBehaviour:
   dialogLines:
   - . . .
   - . . . . . .
-  - What the heck is going on?!
-  - Where were gone all the colors?!
-  - There's absolutely nothing out there. . . Oh my God!
-  - . . . Someone's there? Hellooooo!
-  - I'm not alone, thanks God!
-  - Would you help me to paint the world again, please?
+  - What is going on?!
+  - Where have all the colours gone?!
+  - There's absolutely nothing out there. . . Oh no!
+  - . . . Is somebody there? Hellooooo!
+  - Oh! Hey! You!
+  - I'm not alone, thank God!
+  - I need to get the colours back....
+  - Would you help me paint the world again, please?
 --- !u!82 &391292110
 AudioSource:
   m_ObjectHideFlags: 0
@@ -774,7 +776,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -334.7, y: 6.3}
+  m_AnchoredPosition: {x: -334.69995, y: 6.299988}
   m_SizeDelta: {x: -724.9, y: -37.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1481510136

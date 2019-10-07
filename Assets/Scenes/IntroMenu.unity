@@ -899,7 +899,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press ESC in any moment to return to this menu or quit the game
+  m_Text: Press ESC at any moment to return to this menu or quit the game
 --- !u!222 &695715051
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1035,12 +1035,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Move the mouse to move the brush around player and paint.
+  m_Text: 'Move the mouse to rotate the brush around player and paint.
 
 
-    Left click to color down.
+    Left click: next color
 
-    Right click to color up.'
+    Right click: previous color'
 --- !u!222 &702393717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2655,7 +2655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.023159027, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.4433962, g: 0.26161072, b: 0.13176396, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
