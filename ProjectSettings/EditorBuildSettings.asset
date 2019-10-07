@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/BreynartLevels/Level6.unity
     guid: 83d6f2be52bccb046927beff5d42b1d7
   - enabled: 1
+    path: Assets/Scenes/BreynartLevels/Level7.unity
+    guid: d6ae0dfae07218d45bb6534f98c44769
+  - enabled: 1
     path: Assets/Scenes/Levels/Level1.unity
     guid: 87e8f3e33f073f148bad0cec2d3bc09f
   - enabled: 1

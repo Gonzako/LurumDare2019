@@ -28,6 +28,10 @@ namespace Es.InkPainter.Sample
             {
                 ChangeColor();
             }
+            else if (Input.GetMouseButtonDown(1))
+            {
+                ChangeColorReverse();
+            }
         }
 
         public Color getCurrentColour()
@@ -52,6 +56,22 @@ namespace Es.InkPainter.Sample
             else if (colorIndex == 3)
             {
                 colorIndex = 0;
+                sprite.color = colors[colorIndex];
+                paintAround.brush.Color = colors[colorIndex];
+            }
+        }
+
+        private void ChangeColorReverse()
+        {
+            colorIndex--;
+            if (colorIndex != -1)
+            {
+                sprite.color = colors[colorIndex];
+                paintAround.brush.Color = colors[colorIndex];
+            }
+            else if (colorIndex == -1)
+            {
+                colorIndex = 2;
                 sprite.color = colors[colorIndex];
                 paintAround.brush.Color = colors[colorIndex];
             }
