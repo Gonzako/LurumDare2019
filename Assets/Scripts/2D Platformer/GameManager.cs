@@ -40,6 +40,24 @@ public class GameManager : MonoBehaviour
         }        
     }
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(SceneManager.GetActiveScene().buildIndex <= 1)
+            {
+                currentLevelIndex = 1;
+                Lives = 3;
+                Application.Quit();
+            } else
+            {
+                currentLevelIndex = 1;
+                Lives = 3;
+                SceneManager.LoadScene(1);
+            }
+        }
+    }
+
     internal void KillPlayer()
     {
         Lives--;

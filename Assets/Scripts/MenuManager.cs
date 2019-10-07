@@ -10,10 +10,12 @@ public class MenuManager : MonoBehaviour
 
     public Text txtMusic;
     public Text txtSFX;
+    public GameObject controlsPanel;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        controlsPanel.SetActive(false);
         txtMusic.text = "Music: ON";
         txtSFX.text = "SFX: ON";
     }
@@ -21,6 +23,11 @@ public class MenuManager : MonoBehaviour
     public void GoToNextLevel()
     {
         StartCoroutine(ButtonSound("nextLevel"));
+    }
+
+    public void OpenControlsPanel()
+    {
+        StartCoroutine(ButtonSound("controlsPanel"));
     }
 
     public void ChangeMusicValue()
@@ -37,7 +44,12 @@ public class MenuManager : MonoBehaviour
     {
         if(CONST.isSoundEnabled) audioSource.Play();
         yield return new WaitForSeconds(0.2f);
-        if(obj == "nextLevel")
+        if (obj == "controlsPanel")
+        {
+            controlsPanel.SetActive(true);
+        }
+
+        if (obj == "nextLevel")
         {
             GameManager.Instance.MoveToNextLevel();
             /*
