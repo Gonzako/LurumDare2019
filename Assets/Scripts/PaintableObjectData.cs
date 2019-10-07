@@ -35,7 +35,7 @@ public class PaintableObjectData : MonoBehaviour
                 paintingSound = true;
 
 #if UNITY_EDITOR
-                Debug.Log("PaintSound"); 
+                //Debug.Log("PaintSound"); 
 #endif
                 counter = Time.time + timeToWait;
                 numbersPainted++;
@@ -54,7 +54,7 @@ public class PaintableObjectData : MonoBehaviour
 
                 paintingSound = true;
 #if UNITY_EDITOR
-            Debug.Log("PaintSound"); 
+            //Debug.Log("PaintSound"); 
 #endif
             counter = Time.time + timeToWait;
                 numbersPainted++;

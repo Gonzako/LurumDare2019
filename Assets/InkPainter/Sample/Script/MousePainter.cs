@@ -61,7 +61,7 @@ namespace Es.InkPainter.Sample
 				}
 			}
 		}
-
+        /*
 		public void OnGUI()
 		{
 			if(GUILayout.Button("Reset"))
@@ -71,5 +71,6 @@ namespace Es.InkPainter.Sample
 					canvas.ResetPaint();
 			}
 		}
+        */
 	}
 }

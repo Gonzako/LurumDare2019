@@ -12,6 +12,24 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroMenu.unity
     guid: dc20c419d62d8da41bc077d1a5a4bd95
   - enabled: 1
+    path: Assets/Scenes/BreynartLevels/Level1.unity
+    guid: de26721c37e837a44af020da63877a5b
+  - enabled: 1
+    path: Assets/Scenes/BreynartLevels/Level2.unity
+    guid: 19fc33e25de62ff4e85c560ee02b2384
+  - enabled: 1
+    path: Assets/Scenes/BreynartLevels/Level3.unity
+    guid: 20792d8eac0c97747a4a36aca3e97dcc
+  - enabled: 1
+    path: Assets/Scenes/BreynartLevels/Level4.unity
+    guid: 2fe72e46fbfcdc640b66d98639ff4048
+  - enabled: 1
+    path: Assets/Scenes/BreynartLevels/Level5.unity
+    guid: 540b37273de9a2744a918053b543f4d9
+  - enabled: 1
+    path: Assets/Scenes/BreynartLevels/Level6.unity
+    guid: 83d6f2be52bccb046927beff5d42b1d7
+  - enabled: 1
     path: Assets/Scenes/Levels/Level1.unity
     guid: 87e8f3e33f073f148bad0cec2d3bc09f
   - enabled: 1
