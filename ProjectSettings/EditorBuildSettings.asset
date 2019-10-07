@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroMenu.unity
     guid: dc20c419d62d8da41bc077d1a5a4bd95
   - enabled: 1
+    path: Assets/Scenes/BreynartLevels/Level8.unity
+    guid: d96e5ed8e3d9ef148848839f76f1f044
+  - enabled: 1
     path: Assets/Scenes/BreynartLevels/Level1.unity
     guid: de26721c37e837a44af020da63877a5b
   - enabled: 1
